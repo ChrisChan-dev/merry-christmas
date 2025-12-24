@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #1a1a1a; 
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 1s ease;
+}
+
+body.festive-mode {
+    background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    padding: 2.5rem;
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn-glow {
+    background-color: #d42e2e;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #d42e2e;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse 2s infinite;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-glow:active {
+    transform: scale(0.95);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 46, 46, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(212, 46, 46, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 46, 46, 0); }
+}
+
+#surprise-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.show {
+    display: block !important;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+    user-select: none;
+    z-index: 1;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+    100% { transform: translateY(110vh) translateX(20px); opacity: 0; }
+}
+
+.heart {
+    color: #ff4d4d;
+    animation: beat 1s infinite alternate;
+    display: inline-block;
+}
+
+@keyframes beat {
+    to { transform: scale(1.2); }
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ig-btn {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.ig-btn:hover {
+    transform: scale(1.1);
+    color: #ffd700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        width: 85%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .btn-glow {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}

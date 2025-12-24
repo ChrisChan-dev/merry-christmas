@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Guess What</title>
+    
+    <meta name="description" content="Error: 404 - Page not found. Please contact administrator.">
+    
+    <meta property="og:title" content="GUESS WHAT">
+    <meta property="og:description" content="...........">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="intro-content">
+            <h1>Hmm… this button looks suspicious 🤔</h1>
+            <p>I found this weird button here. I wonder what happens if you press it...</p>
+            <button class="btn-glow" onclick="revealSurprise()">DO NOT CLICK 🎁</button>
+        </div>
+
+        <div id="surprise-content">
+            <h1>🎄 Merry Christmas! 🎄</h1>
+            <p>
+                I just wanted to drop by and wish you the happiest of holidays.<br>
+                <br>
+                I hope this little surprise makes you smile as much as you make me smile. <span class="heart">💖</span>
+            </p>
+            
+            <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 20px;">(Now go eat a delicious salad! 🥗)</p>
+
+            <div class="footer">
+                <span>Made by ChannDev ( 6-7 hours )</span>
+                <a href="https://www.instagram.com/ccc.o_c.v/" target="_blank" class="ig-btn" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-waiting-for-christmas-3978.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
